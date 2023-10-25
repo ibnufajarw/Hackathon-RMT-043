@@ -53,22 +53,54 @@ let database = {
     },
     anakanak: {
         buku1: {
-            judul: '',
-            sinopsis: '',
-            tahun: '',
-            penulis: '',
-            penerbit: '',
-            jumlahHalaman: '',
-            bahasa: ''
+            judul: 'ENSIKLOPEDIA ANAK CERDAS : OLAHRAGA',
+            sinopsis: 'Cro-Magnon, merupakan nenek moyang sejak 35.000 tahun lalu. Berlari lebih cepat daripada Usain Bolt, juara dunia lari 100 m! Apakah kamu tidak percaya? Kini, kamu hidup di zaman modern yang semuanya sudah serba praktis, sama halnya dengan olahraga. ternyata olahraga sudah ada sejak zaman dulu. Dan olahraga berkembang dari zaman dulu hingga zaman sekarang. Banyak terjadi perubahan. Kira-kira bagaimana awal mula olahraga di sekitar kita, ya?Penasaran, kan? Yuk, kita pelajari bersama!',
+            tahun: "2019",
+            penulis: 'Geraldine Maincent',
+            penerbit: 'Bhuana Ilmu Populer',
+            jumlahHalaman: "96",
+            bahasa: 'Indonesia',
+            gambar: 'assets/anak-anak/EnsiklopediaAnakCerdasOlahraga.jpg'
         },
         buku2: {
-            judul: '',
-            sinopsis: '',
-            tahun: '',
-            penulis: '',
-            penerbit: '',
-            jumlahHalaman: '',
-            bahasa: ''
+            judul: 'KISAH EMPAT SAHABAT SUPER: MEMBEBASKAN PENYU',
+            sinopsis: 'Bukuinimenceritakankisahkeempatsahabat. Merekaadalah Orangutan, Harimau, Cendrawasih, dan Komodo. KeempatsahabattersebutmencobamenolongseekorIbuPenyu yang tersangkutsampah di pantai.',
+            tahun: "2017",
+            penulis: 'VALERINA DANIEL',
+            penerbit: 'DAR',
+            jumlahHalaman: "40",
+            bahasa: 'Indonesia',
+            gambar: 'assets/anak-anak/KISAHEMPATSAHABATSUPERMEMBEBASKANPENYU.jpg'
+        },
+        buku3: {
+            judul: 'Komik Tajwid untuk anak',
+            sinopsis: 'Komik anak menjadi cara menyenangkan, menarik, dan mudah untuk mengajarkan nilai-nilai Islam dan nilai-nilai moral pendidikan kepada anak',
+            tahun: "2022",
+            penulis: 'Lina Herlina',
+            penerbit: 'Gema Insani',
+            jumlahHalaman: "72",
+            bahasa: 'Indonesia',
+            gambar: 'assets/anak-anak/komiktajwid.jpg'
+        },
+        buku4: {
+            judul: 'Seri Buku Toleransi: Prasangka Moka',
+            sinopsis: "Moka kebingungan! Perjalanan ke rumah nenek yang awalnya menyenangkan seketika menjadi beban ketika Moka lupa arah jalan. Ia terus melangkah tanpa tahu tujuan, sampai hari mulai gelap dan matahari tenggelam perlahan. Haruskah Moka menerima bantuan dari binatang lain di hutan? Apa benar perangai mereka seperti yang sering dikabarkan?",
+            tahun: "2018",
+            penulis: 'Sekar Sosronegoro',
+            penerbit: 'Buah Hati',
+            jumlahHalaman: "32",
+            bahasa: 'Indonesia',
+            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg'
+        },
+        buku5: {
+            judul: 'Legenda Dongeng Nusantara: Keong Mas',
+            sinopsis: 'Alkisah, ada dua putri raja yang tidak akur. Salah seorang putri mempunyai rasa iri hati karena saudaranya akan menikah dengan calon suami yang tampan  nan rupawan. Dongeng ini mengajarkan kita untuk tidak memunyai rasa iri, karena iri dapat menjerumuskan kita untuk melakukan hal-hal buruk lainnya, seperti salah seorang tuan putri dalam kisah ini.',
+            tahun: "2020",
+            penulis: 'Kak Adam',
+            penerbit: 'Playground',
+            jumlahHalaman: 	"28",
+            bahasa: 'Indonesia',
+            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpg'
         },
     }
 }
