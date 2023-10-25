@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    HELLO WORLD
+    <div class="container">
+        <div class="menu">
+            <div class="logo">
+                <img src="assets/logo-png.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active"> <i class="fa-solid fa-house-user fa-bounce"></i>Home</li>
+                <li><i class="fa-solid fa-user fa-bounce"></i> User</li>
+                <li><i class="fa-solid fa-comment fa-bounce"></i> Feedback</li>
+            </ul>
+             <ul>
+                <li><i class="fa-brands fa-whatsapp fa-bounce"></i>Whatsapp</li>
+                <li><i class="fa-solid fa-envelope fa-bounce"></i></i> Email</li>
+                <li><i class="fa-brands fa-instagram fa-bounce"></i> Instagram</li>
+            </ul>
+        </div>
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <h2>PRODUCTS</h2>
+            <div class="list">
+                <div class="item" data-key="1"> <!--LINE UNTUK COPY PASTE PRODUCT -->
+                    <div class="img">
+                        <img src="#" alt="1">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product name 1</div><!--Gambar 1: Judul Product-->
+                        <div class="des"><!--Gambar 1:Deskripsi-->
+                            INI BUKU BUDI,BUDI INI BUKU
+                        </div>
+                        <div class="price">Rp.0</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="item" data-key="1"> <!--LINE UNTUK COPY PASTE PRODUCT -->
+                    <div class="img">
+                        <img src="#" alt="1">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product name 1</div><!--Gambar 1: Judul Product-->
+                        <div class="des"><!--Gambar 1:Deskripsi-->
+                            INI BUKU BUDI,BUDI INI BUKU
+                        </div>
+                        <div class="price">Rp.0</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>  
+                
+            </div>
+
+        </div>
+        <div class="cart">
+            <div class="name">CART</div>
+            <div class="listCart">
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
