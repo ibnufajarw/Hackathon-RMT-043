@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    HELLO WORLD
+    <div class="container">
+        <div class="menu">
+            <div class="logo">
+                <img src="assets/logo-png.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active"> <i class="fa-solid fa-house-user fa-bounce"></i>Home</li>
+                <li><i class="fa-solid fa-user fa-bounce"></i> User</li>
+                <li><i class="fa-solid fa-comment fa-bounce"></i> Feedback</li>
+            </ul>
+             <ul>
+                <li><i class="fa-brands fa-whatsapp fa-bounce"></i>Whatsapp</li>
+                <li><i class="fa-solid fa-envelope fa-bounce"></i></i> Email</li>
+                <li><i class="fa-brands fa-instagram fa-bounce"></i> Instagram</li>
+            </ul>
+        </div>
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <h2>Buku Kategori : Dewasa</h2>
+            <div class="list" id="dataBukuDewasa"></div>
+            <h2>Buku Kategori : Anak-anak</h2>
+            <div class="list" id="dataBukuAnakanak"></div>
+
+        </div>
+        <div class="cart">
+            <div class="name">CART</div>
+            <div class="listCart">
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
