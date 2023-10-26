@@ -1,5 +1,4 @@
 let bukuDewasa = database.dewasa;
-console.log(bukuDewasa);
 let bukuAnakAnak = database.anakanak;
 
 let cardsDewasa = "";
@@ -75,6 +74,9 @@ function showBookDetails(
 }
 // modal //
 
+let resetButton = document.getElementById('reset')
+let searchButton = document.querySelector(".searchButton");
+let inputClass = document.querySelector(".inputKeyword");
 function searchBooks() {
   let keywordSearch = document
     .querySelector(".inputKeyword")
@@ -106,8 +108,7 @@ function searchBooks() {
     }
   }
 }
-let searchButton = document.querySelector(".searchButton");
-let inputClass = document.querySelector(".inputKeyword");
+
 searchButton.addEventListener("click", searchBooks);
 inputClass.addEventListener("keyup", function (btn) {
   if (btn.keyCode === 13) {
@@ -184,3 +185,17 @@ function Remove($key) {
   });
 }
 //Progress Line 41 s.d 77
+
+(function reset() {
+  searchButton.addEventListener('click', function () {
+    resetButton.style.display = 'inline-block'
+  })
+  inputClass.addEventListener("keyup", function (btn) {
+    if (btn.keyCode === 13) {
+      resetButton.style.display = 'inline-block'
+    }
+  })
+  resetButton.addEventListener('click', function () {
+    window.location.href = 'index.html'
+  })
+})()
