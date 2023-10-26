@@ -2,5 +2,6 @@
     "emmet.excludeLanguages": [
         "xsl",
         "xslt"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
