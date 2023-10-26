@@ -16,7 +16,7 @@ let cardsBukuAnakAnak = document.querySelector(".dataBukuAnakanak");
 cardsBukuAnakAnak.innerHTML = cardsAnakAnak;
 
 function showBuku(i) {
-	return `<div class="item" data-key="${i.id}">
+	
                 <div class="img">
                     <img src="${i.gambar}" alt="gambar buku">
                 </div>
