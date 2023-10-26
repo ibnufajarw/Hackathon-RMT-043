@@ -9,7 +9,9 @@ let database = {
             penulis: 'Axie Oh',
             jumlahHalaman: '296',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/TheGirlwhoFellBeneaththeSea.jpg'
+            gambar: 'assets/dewasa/TheGirlwhoFellBeneaththeSea.jpg',
+            stok: '10',
+            harga: '92000'
         },
         {
             id : 3,
@@ -20,7 +22,9 @@ let database = {
             penerbit: 'Elex Media Komputindo',
             jumlahHalaman: '296',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/JejakSejarahDiDuaTanahHaram.jpg'
+            gambar: 'assets/dewasa/JejakSejarahDiDuaTanahHaram.jpg',
+            stok: '14',
+            harga: '104000'
         },
         {
             id : 5,
@@ -31,7 +35,9 @@ let database = {
             penerbit: 'Pt. Rajagrafindo Persada',
             jumlahHalaman: '178',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/EtikaDanMoralPenegakHukumDiIndonesia.jpg'
+            gambar: 'assets/dewasa/EtikaDanMoralPenegakHukumDiIndonesia.jpg',
+            stok: '4',
+            harga: '67150'
         },
         {
             id : 7,
@@ -42,7 +48,9 @@ let database = {
             penerbit: 'Penerbit Satu-satu',
             jumlahHalaman: '391',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/365RenunganDariDuniaMusik.jpg'
+            gambar: 'assets/dewasa/365RenunganDariDuniaMusik.jpg',
+            stok: '13',
+            harga: '16000'
         },
         {
             id : 9,
@@ -53,7 +61,9 @@ let database = {
             penerbit: 'Anak Hebat Indonesia',
             jumlahHalaman: '122',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/TheMiracleOfFokus.jpg'
+            gambar: 'assets/dewasa/TheMiracleOfFokus.jpg',
+            stok: '3',
+            harga: '42500'
         },
     ],
     anakanak: [
