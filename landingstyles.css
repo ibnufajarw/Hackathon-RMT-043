@@ -1,0 +1,105 @@
+/* Reset some default styles */
+:root{
+    --white: #fff;
+    --light: #eeeded;
+    --orange: orange;
+}
+
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    padding: 10px;
+}
+body {
+    font-family: "system-ui";
+    background-image: url("assets/BGLanding.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 10px 0px ;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 80px;
+    border-radius: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    /* Adjust the size as needed */
+    height: auto;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: larger;
+    font-style: bold;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    background-image: url('your-image.jpg');
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feature {
+    margin: 20px;
+}
+
+.about {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

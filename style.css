@@ -24,6 +24,7 @@ body{
     background-color: var(--white);
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    overflow: auto;
 }
 .container .cart{
     background-color: var(--white);
