@@ -17,12 +17,12 @@ let cardsBukuAnakAnak = document.querySelector(".dataBukuAnakanak");
 cardsBukuAnakAnak.innerHTML = cardsAnakAnak;
 
 function showBuku(i) {
-  return `<div class="item" data-key="1" onclick="showBookDetails('${i.judul}', '${i.penulis}', '${i.penerbit}', '${i.tahun}', '${i.bahasa}', '${i.gambar}', '${i.sinopsis}', '${i.stok}', '${i.harga}')">
+  return `<div class="item" data-key="${i.id}" onclick="showBookDetails('${i.judul}', '${i.penulis}', '${i.penerbit}', '${i.tahun}', '${i.bahasa}', '${i.gambar}', '${i.sinopsis}', '${i.stok}', '${i.harga}')">
                 <div class="img">
                     <img src="${i.gambar}" alt="gambar buku">
                 </div>
                 <div class="content">
-                    <div class="title">${i.judul}</div>
+                    <div class="title" style="cursor:pointer">${i.judul}</div>
                     <div class="des">Penulis : ${i.penulis}</div>
                     <div class="des">Penerbit : ${i.penerbit}</div>
                     <div class="des">Tahun : ${i.tahun}</div>
