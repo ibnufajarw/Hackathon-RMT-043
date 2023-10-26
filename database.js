@@ -76,7 +76,9 @@ let database = {
             penerbit: 'Bhuana Ilmu Populer',
             jumlahHalaman: "96",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/EnsiklopediaAnakCerdasOlahraga.jpg'
+            gambar: 'assets/anak-anak/EnsiklopediaAnakCerdasOlahraga.jpg',
+            stok: '7',
+            harga: '121500'
         },
         {
             id : 4,
@@ -87,7 +89,9 @@ let database = {
             penerbit: 'DAR',
             jumlahHalaman: "40",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/KISAHEMPATSAHABATSUPERMEMBEBASKANPENYU.jpeg'
+            gambar: 'assets/anak-anak/KISAHEMPATSAHABATSUPERMEMBEBASKANPENYU.jpeg',
+            stok: '8',
+            harga: '35000'
         },
         {
             id : 6,
@@ -98,7 +102,9 @@ let database = {
             penerbit: 'Gema Insani',
             jumlahHalaman: "72",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/komiktajwid.jpg'
+            gambar: 'assets/anak-anak/komiktajwid.jpg',
+            stok: '12',
+            harga: '81000'
         },
         {
             id : 8,
@@ -109,7 +115,9 @@ let database = {
             penerbit: 'Buah Hati',
             jumlahHalaman: "32",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpeg'
+            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpeg',
+            stok: '2',
+            harga: '55000'
         },
         {
             id : 10,
@@ -120,7 +128,9 @@ let database = {
             penerbit: 'Playground',
             jumlahHalaman: 	"28",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg'
+            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg',
+            stok: '5',
+            harga: '26775'
         },
     ]
 };
