@@ -247,19 +247,33 @@ body{
   
   .modal-content {
     margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 400px;
+    max-width: 10gi00px;
     background-color: #fefefe;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Bagian gambar mendapat 1/3 lebar, sedangkan detail 2/3 lebar */
     text-align: left;
-  }
+}
 
-  .modal-content img {
-    max-width: 100%;
+.modal-content img {
+    max-width: 80%;
     height: auto;
+}
+
+.modal-image {
+    text-align: center;
+}
+
+.modal-details {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Tata letak vertikal (kolom) untuk teks */
+}
+
+.modal-title {
+    text-align: center;
 }
   
   .close {
