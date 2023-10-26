@@ -5,14 +5,14 @@ let cardsDewasa = ''
 bukuDewasa.forEach(i => {
     cardsDewasa += showBuku(i)
 })
-let cardsBukuDewasa = document.querySelector('#dataBukuDewasa')
+let cardsBukuDewasa = document.querySelector('.dataBukuDewasa')
 cardsBukuDewasa.innerHTML = cardsDewasa
 
 let cardsAnakAnak = ''
 bukuAnakAnak.forEach(i => {
     cardsAnakAnak += showBuku(i)
 })
-let cardsBukuAnakAnak = document.querySelector('#dataBukuAnakanak')
+let cardsBukuAnakAnak = document.querySelector('.dataBukuAnakanak')
 cardsBukuAnakAnak.innerHTML = cardsAnakAnak
 
 function showBuku(i) {
@@ -36,19 +36,34 @@ function showBuku(i) {
 
 function searchBooks() {
     let keywordSearch = document.querySelector('.inputKeyword').value.toLowerCase()
-    let filteredBooksDewasa = bukuDewasa.filter(i => i.judul.toLowerCase().includes(keywordSearch))
-    let filteredBooksAnakAnak = bukuAnakAnak.filter(i => i.judul.toLowerCase().includes(keywordSearch))
-    let cardsDewasa = ''
-    filteredBooksDewasa.forEach(i => {
-        cardsDewasa += showBuku(i)
-    })
-    cardsBukuDewasa.innerHTML = cardsDewasa
-
-    let cardsAnakAnak = ''
-    filteredBooksAnakAnak.forEach(i => {
-        cardsAnakAnak += showBuku(i)
-    })
-    cardsBukuAnakAnak.innerHTML = cardsAnakAnak
+    if (keywordSearch === '') {
+        alert('Masukkan kata pencarian!')
+    } else {
+        let filteredBooksDewasa = bukuDewasa.filter(i => i.judul.toLowerCase().includes(keywordSearch))
+        let filteredBooksAnakAnak = bukuAnakAnak.filter(i => i.judul.toLowerCase().includes(keywordSearch))
+        let cardsDewasa = ''
+        filteredBooksDewasa.forEach(i => {
+            cardsDewasa += showBuku(i)
+        })
+        
+        let cardsAnakAnak = ''
+        filteredBooksAnakAnak.forEach(i => {
+            cardsAnakAnak += showBuku(i)
+        })
+        
+        if(cardsDewasa === '' && cardsAnakAnak === '' ) {
+            alert('Pencarian yang kamu cari tidak ditemukan!')
+        } else {
+            cardsBukuDewasa.innerHTML = cardsDewasa
+            cardsBukuAnakAnak.innerHTML = cardsAnakAnak
+        }
+    }
 }
 let searchButton = document.querySelector('.searchButton')
+let inputClass = document.querySelector('.inputKeyword')
 searchButton.addEventListener('click', searchBooks)
+inputClass.addEventListener('keyup', function (btn) {
+    if (btn.keyCode === 13) {
+        searchBooks()
+    }
+})
