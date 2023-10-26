@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bookipedia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./assets/logo-png.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="logo">
+                <img src="assets/logo-png.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active"><i class="fa-solid fa-house-user fa-bounce"></i> Home</li>
+                <li><i class="fa-solid fa-user fa-bounce"></i> User</li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-whatsapp fa-bounce"></i><a style="text-decoration:none"
+                        href="https://www.whatsapp.com/"> Whatsapp</a></li>
+                <li><i class="fa-solid fa-envelope fa-bounce"></i><a style="text-decoration:none"
+                        href="https://www.gmail.com">Email</a></li>
+                <li><i class="fa-brands fa-instagram fa-bounce"></i><a style="text-decoration:none"
+                        href="https://www.Instagram.com">Instagram</a></li>
+            </ul>
+
+        </div>
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="inputKeyword" type="text" placeholder="Search...">
+                    <button class="searchButton">Search</button>
+                    <button class="delete" id="reset" style="display:none">Reset Pencarian</button>
+                </div>
+            </div>
+            <div class="books">
+                <h1>Form Tambah Data Buku</h1>
+                <form id="addBookForm">
+                    <label for="kategori">Kategori:</label>
+                    <select name="kategori" id="kategori">
+                        <option value="dewasa">Dewasa</option>
+                        <option value="anakanak">Anak-Anak</option>
+                    </select><br>
+                
+                    <label for="judul">Judul:</label>
+                    <input type="text" name="judul" id="judul" required><br>
+                
+                    <label for="sinopsis">Sinopsis:</label>
+                    <input type="text" name="sinopsis" id="sinopsis" required><br>
+                
+                    <label for="penerbit">Penerbit:</label>
+                    <input type="text" name="penerbit" id="penerbit" required><br>
+                
+                    <label for="tahun">Tahun Terbit:</label>
+                    <input type="number" name="tahun" id="tahun" required><br>
+                
+                    <label for="penulis">Penulis:</label>
+                    <input type="text" name="penulis" id="penulis" required><br>
+                
+                    <label for="jumlahHalaman">Jumlah Halaman:</label>
+                    <input type="number" name="jumlahHalaman" id="jumlahHalaman" required><br>
+                
+                    <label for="bahasa">Bahasa:</label>
+                    <input type="text" name="bahasa" id="bahasa" required><br>
+                
+                    <label for="stok">Stok:</label>
+                    <input type="number" name="stok" id="stok" required><br>
+                
+                    <label for="harga">Harga:</label>
+                    <input type="number" name="harga" id="harga" required><br>
+                
+                    <label for="gambar">Alamat Gambar:</label>
+                    <input type="text" name="gambar" id="gambar" required><br>
+                
+                    <button type="button" onclick="tambahBuku()">Tambah Buku</button>
+                </form>
+            </div>
+        </div>
+        <div class="cart">
+
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+    <!-- <script src="database.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
