@@ -18,6 +18,7 @@ cardsBukuAnakAnak.innerHTML = cardsAnakAnak;
 
 function showBuku(i) {
 	return `<div class="item" data-key="1" onclick="showBookDetails('${i.judul}', '${i.penulis}', '${i.penerbit}', '${i.tahun}', '${i.bahasa}', '${i.gambar}', '${i.sinopsis}')">
+
                 <div class="img">
                     <img src="${i.gambar}" alt="gambar buku">
                 </div>
@@ -30,7 +31,7 @@ function showBuku(i) {
                     <div class="price">Rp.0</div>
                     <input type="number" class="count" min="1" value="1">
                     <button class="add">Add to cart</button>
-                    <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="remove" onclick="Remove(${i.id})"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>`;
 }
@@ -134,5 +135,40 @@ document.querySelector("#submitReview").addEventListener("click", () => {
 
 displayReviews();
 
+//Progress Line 41 s.d 77
+// ini untuk memasukkan item ke dalam cart
+let list = document.querySelectorAll(`.list .item`)
+list.forEach(item => {
+    item.addEventListener(`click`, function(event){
+        if (event.target.classList.contains(`add`)){
+            var itemNew = item.cloneNode(true);
+            let checkIsset = false
 
+            let listCart = document.querySelectorAll(`.cart .item`);
+            listCart.forEach(cart => {
+                if (cart.getAttribute(`data-key`) === itemNew.getAttribute(`data-key`)){
+                    checkIsset = true
+                    cart.classList.add(`danger`);
+                    setTimeout(function(){
+                        cart.classList.remove(`danger`);
+                    }, 1000)
+                }
+            })
+            if (checkIsset == false){
+                document.querySelector(`.listCart`).appendChild(itemNew);
+            }
+        }
+    })
+})
 
+//ini fitur menghapus item di Cart
+function Remove($key){
+    let listCart = document.querySelectorAll(`.cart .item`);
+    listCart.forEach(item => {
+        if (item.getAttribute(`data-key`) == $key){
+            item.remove();
+            return;
+        }
+    })
+}
+//Progress Line 41 s.d 77
