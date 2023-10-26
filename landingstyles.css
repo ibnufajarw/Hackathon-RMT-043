@@ -1,127 +1,62 @@
-/* Reset some default styles */
-
-body, h1, p, ul {
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    padding: 10px;
-}
-body {
+body, h1, p, ul, li, a {
+    margin: auto;
+    padding: auto;
     font-family: "system-ui";
+}
+
+body {
     background-image: url("assets/BGLanding.jpg");
+    background-color: #f2f2f2;
     background-position: center;
     background-size: cover;
-    
+    overflow: hidden;
 }
-/* Navbar Section start */
-.navbarSection{
-    display: inline-flex;
-    align-items: center;
-    gap: 133px;
-}
-
-.navbar{
-    display: flex;
-    padding: 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 140px;
-    border-radius: 16px;
-    background: rgba(91, 69, 30, 0.34);
-}
-
-.navbarSection .navbar p {
-    color: #F1F1F1;
-    font-family: Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-/* Navbar Section end */
-
-/* For logo */
-.logoSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-.logoSection .logo {
-    width: 128px;
-    height: 87px;
-}
-.logoSection .teks {
-    color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Helvetica;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-/* Logo end */
-
-/* Img start */
-
-    .bgImg {
-    width: 667px;
-    height: 474px;
-    flex-shrink: 0;
-    border-radius: 16px;
-    border: 4.7px solid #F1F1F1;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    }
-
-    .jargonSection{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 34px;
-    }
-
-    .jargonSection h1{
-        width: 560px;
-        height: 53px;
-    }
-
-    .jargonSection .button {
-    display: flex;
-    width: 158px;
-    height: 60px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    }
-    .jargonSection .button .text {
-    color: #FF9100;
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    }
-
-/* Img end */
-
 
 header {
     background-color: rgba(0, 0, 0, 0.55);
     color: #fff;
-    padding: 10px 0px ;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 50px;
-    border-radius: 20px;
-    font-size: larger;
+    padding: 20px 0;
+    margin: 50px 24%;
+    border-radius: 30px;
+    font-size: auto;
     font-weight: bold;
 }
 
+.navbarSection {
+    display: flex;
+    align-items: center;
+    gap: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100%;
+    background: rgba(91, 69, 30, 0.2);
+}
+
+.navbar p {
+    color: #F1F1F1;
+    font-size: 60px;
+    font-weight: 400px;
+}
+
+.logoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 
 
 nav ul {
@@ -131,10 +66,8 @@ nav ul {
 
 nav li {
     font-size: larger;
-    font-style: bold;
     display: inline;
-    margin-right: 20px;
-    margin-left: 50px;
+    margin: 0 50px;
 }
 
 nav a {
@@ -143,16 +76,8 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: none;
     color: orange;
     transition: 0.3s;
-}
-.hero {
-    background-image: url('#');
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-    padding: 100px 0;
 }
 
 .btn {
@@ -165,49 +90,47 @@ nav a:hover {
     margin-top: 5%;
     width: 100px;
     height: 30px;
-    font-family: system-ui;
     font-size: larger;
     font-weight: bold;
 }
 
 .btn:hover {
-    display: inline-block;
-    background-color:#fff;
-    color:black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 5%;
+    background-color: #fff;
+    color: black;
     transition: 0.5s;
 }
 
 .features {
-    padding: 50px 0;
+    padding: auto;
     text-align: center;
-}
-
-.feature {
     margin: 20px;
-    font-style: bold;
-
+    font-weight: bold;
 }
 
 .about {
-    padding: 50px 0;
+    background-color: rgba(255, 132, 0, 0.26);
+    padding: 10px;
     text-align: center;
-    font-style: italic;
-    font-size: xx-large;
-    margin-bottom: 6%;
+    font-size: x-large;
+    margin: 60px 10%;
+    border-radius: 30px;
 }
 
-.contact {
-    padding: 30px 0;
-    text-align: center;
+.about h1 {
+    padding: auto;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 47px;
+}
+
+.about p {
+    font-size: 20px;
+    line-height: 1;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
