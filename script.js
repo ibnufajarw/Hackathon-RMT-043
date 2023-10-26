@@ -1,4 +1,5 @@
 let bukuDewasa = database.dewasa;
+console.log(bukuDewasa)
 let bukuAnakAnak = database.anakanak;
 
 let cardsDewasa = "";
@@ -16,7 +17,7 @@ let cardsBukuAnakAnak = document.querySelector(".dataBukuAnakanak");
 cardsBukuAnakAnak.innerHTML = cardsAnakAnak;
 
 function showBuku(i) {
-	return `<div class="item" data-key="1">
+	return `<div class="item" data-key="1" onclick="showBookDetails('${i.judul}', '${i.penulis}', '${i.penerbit}', '${i.tahun}', '${i.bahasa}', '${i.gambar}', '${i.sinopsis}')">
                 <div class="img">
                     <img src="${i.gambar}" alt="gambar buku">
                 </div>
@@ -33,6 +34,35 @@ function showBuku(i) {
                 </div>
             </div>`;
 }
+
+
+// modal //
+function showBookDetails(judul, penulis, penerbit, tahun, bahasa, gambar, sinopsis) {
+    let modal = document.getElementById("myModal");
+    let modalContent = document.getElementById("modalContent");
+
+    modalContent.innerHTML = `
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>${judul}</h2>
+        </div>
+        <div class="modal-body">
+            <p><strong>Penulis:</strong> ${penulis}</p>
+            <p><strong>Penerbit:</strong> ${penerbit}</p>
+            <p><strong>Tahun:</strong> ${tahun}</p>
+            <p><strong>Bahasa:</strong> ${bahasa}</p>
+			<p><strong>Sinopsis:</strong> ${sinopsis}</p>
+            <img src="${gambar}" alt="gambar buku">
+        </div>
+    `;
+    modal.style.display = "block";
+    let span = modal.querySelector(".close");
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+}
+// modal //
+
 
 function searchBooks() {
 	let keywordSearch = document
@@ -103,3 +133,6 @@ document.querySelector("#submitReview").addEventListener("click", () => {
 });
 
 displayReviews();
+
+
+
