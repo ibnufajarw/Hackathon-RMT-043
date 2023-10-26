@@ -2,7 +2,7 @@
 :root{
     --white: #fff;
     --light: #eeeded;
-    --orange: orange;
+    --orange: #ffa500;
 }
 body{
     background-color: var(--orange);
