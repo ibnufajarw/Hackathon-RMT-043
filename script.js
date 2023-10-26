@@ -8,10 +8,6 @@ bukuDewasa.forEach(i => {
 let cardsBukuDewasa = document.querySelector('#dataBukuDewasa')
 cardsBukuDewasa.innerHTML = cardsDewasa
 
-//================================================================================//
-//================================= BATAS SUCI ===================================//
-//================================================================================//
-
 let cardsAnakAnak = ''
 bukuAnakAnak.forEach(i => {
     cardsAnakAnak += showBuku(i)
@@ -37,3 +33,22 @@ function showBuku(i) {
                 </div>
             </div>`
 }
+
+function searchBooks() {
+    let keywordSearch = document.querySelector('.inputKeyword').value.toLowerCase()
+    let filteredBooksDewasa = bukuDewasa.filter(i => i.judul.toLowerCase().includes(keywordSearch))
+    let filteredBooksAnakAnak = bukuAnakAnak.filter(i => i.judul.toLowerCase().includes(keywordSearch))
+    let cardsDewasa = ''
+    filteredBooksDewasa.forEach(i => {
+        cardsDewasa += showBuku(i)
+    })
+    cardsBukuDewasa.innerHTML = cardsDewasa
+
+    let cardsAnakAnak = ''
+    filteredBooksAnakAnak.forEach(i => {
+        cardsAnakAnak += showBuku(i)
+    })
+    cardsBukuAnakAnak.innerHTML = cardsAnakAnak
+}
+let searchButton = document.querySelector('.searchButton')
+searchButton.addEventListener('click', searchBooks)

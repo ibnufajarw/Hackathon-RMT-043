@@ -90,7 +90,7 @@ let database = {
             penerbit: 'Buah Hati',
             jumlahHalaman: "32",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg'
+            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpeg'
         },
         {
             judul: 'Legenda Dongeng Nusantara: Keong Mas',
@@ -100,7 +100,7 @@ let database = {
             penerbit: 'Playground',
             jumlahHalaman: 	"28",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpg'
+            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg'
         },
     ]
 }
