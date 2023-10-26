@@ -143,7 +143,6 @@ document.querySelector("#submitReview").addEventListener("click", () => {
     document.querySelector("#rating").value = "1";
   }
 });
-
 displayReviews();
 
 //Progress Line 41 s.d 77
