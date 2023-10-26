@@ -143,7 +143,6 @@ document.querySelector("#submitReview").addEventListener("click", () => {
     document.querySelector("#rating").value = "1";
   }
 });
-
 displayReviews();
 
 //Progress Line 41 s.d 77
@@ -199,3 +198,27 @@ function Remove($key) {
     window.location.href = 'index.html'
   })
 })()
+
+
+//============================================== create akun khusus admin
+
+let users = []
+function tampilkanModal() {
+    document.getElementById("daftarModal").style.display = "block"
+    document.getElementById("daftarAkunButton").style.display = "none"
+}
+function simpanAkun() {
+    const username = document.getElementById("username").value
+    users.push({ username })
+    document.getElementById("daftarModal").style.display = "none"
+    document.getElementById("logoutButton").style.display = "block"
+    document.getElementById("userName").textContent = `Welcome, ${username}`
+    document.getElementById("userName").style.display = "block"
+}
+function logout() {
+    document.getElementById("userName").textContent = ""
+    document.getElementById("userName").style.display = "none"
+    document.getElementById("logoutButton").style.display = "none"
+    document.getElementById("daftarAkunButton").style.display = "block"
+    document.getElementById("daftarForm").reset()
+}
