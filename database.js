@@ -9,7 +9,9 @@ let database = {
             penulis: 'Axie Oh',
             jumlahHalaman: '296',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/TheGirlwhoFellBeneaththeSea.jpg'
+            gambar: 'assets/dewasa/TheGirlwhoFellBeneaththeSea.jpg',
+            stok: '10',
+            harga: '92000'
         },
         {
             id : 3,
@@ -20,7 +22,9 @@ let database = {
             penerbit: 'Elex Media Komputindo',
             jumlahHalaman: '296',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/JejakSejarahDiDuaTanahHaram.jpg'
+            gambar: 'assets/dewasa/JejakSejarahDiDuaTanahHaram.jpg',
+            stok: '14',
+            harga: '104000'
         },
         {
             id : 5,
@@ -31,7 +35,9 @@ let database = {
             penerbit: 'Pt. Rajagrafindo Persada',
             jumlahHalaman: '178',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/EtikaDanMoralPenegakHukumDiIndonesia.jpg'
+            gambar: 'assets/dewasa/EtikaDanMoralPenegakHukumDiIndonesia.jpg',
+            stok: '4',
+            harga: '67150'
         },
         {
             id : 7,
@@ -42,7 +48,9 @@ let database = {
             penerbit: 'Penerbit Satu-satu',
             jumlahHalaman: '391',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/365RenunganDariDuniaMusik.jpg'
+            gambar: 'assets/dewasa/365RenunganDariDuniaMusik.jpg',
+            stok: '13',
+            harga: '16000'
         },
         {
             id : 9,
@@ -53,7 +61,9 @@ let database = {
             penerbit: 'Anak Hebat Indonesia',
             jumlahHalaman: '122',
             bahasa: 'Indonesia',
-            gambar: 'assets/dewasa/TheMiracleOfFokus.jpg'
+            gambar: 'assets/dewasa/TheMiracleOfFokus.jpg',
+            stok: '3',
+            harga: '42500'
         },
     ],
     anakanak: [
@@ -66,7 +76,9 @@ let database = {
             penerbit: 'Bhuana Ilmu Populer',
             jumlahHalaman: "96",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/EnsiklopediaAnakCerdasOlahraga.jpg'
+            gambar: 'assets/anak-anak/EnsiklopediaAnakCerdasOlahraga.jpg',
+            stok: '7',
+            harga: '121500'
         },
         {
             id : 4,
@@ -77,7 +89,9 @@ let database = {
             penerbit: 'DAR',
             jumlahHalaman: "40",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/KISAHEMPATSAHABATSUPERMEMBEBASKANPENYU.jpeg'
+            gambar: 'assets/anak-anak/KISAHEMPATSAHABATSUPERMEMBEBASKANPENYU.jpeg',
+            stok: '8',
+            harga: '35000'
         },
         {
             id : 6,
@@ -88,7 +102,9 @@ let database = {
             penerbit: 'Gema Insani',
             jumlahHalaman: "72",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/komiktajwid.jpg'
+            gambar: 'assets/anak-anak/komiktajwid.jpg',
+            stok: '12',
+            harga: '81000'
         },
         {
             id : 8,
@@ -99,7 +115,9 @@ let database = {
             penerbit: 'Buah Hati',
             jumlahHalaman: "32",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpeg'
+            gambar: 'assets/anak-anak/SeriBukuToleransiPrasangkaMoka.jpeg',
+            stok: '2',
+            harga: '55000'
         },
         {
             id : 10,
@@ -110,7 +128,9 @@ let database = {
             penerbit: 'Playground',
             jumlahHalaman: 	"28",
             bahasa: 'Indonesia',
-            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg'
+            gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg',
+            stok: '5',
+            harga: '26775'
         },
     ]
 };
