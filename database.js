@@ -113,4 +113,5 @@ let database = {
             gambar: 'assets/anak-anak/LegendaDongengNusantaraKeongMas.jpg'
         },
     ]
-}
+};
+
