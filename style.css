@@ -2,15 +2,15 @@
 :root{
     --white: #fff;
     --light: #eeeded;
-    --orange: orange;
+    --orange: #ffa500;
 }
 body{
     background-color: var(--orange);
     font-family: system-ui;
-    overflow: hidden;
+    overflow: auto;
 }
 .container{
-    width:1200px;
+    width:1300px;
     border:1px solid var(--white);
     max-width: 100%;
     margin:50px auto 0;
@@ -19,6 +19,7 @@ body{
     padding:20px;
     border-radius: 30px;
     min-height: 80vh;
+    overflow: auto;
 }
 .container .menu{
     background-color: var(--white);
@@ -35,6 +36,7 @@ body{
     border-left: 1px solid var(--light);
     border-right: 1px solid var(--light);
 }
+
 /* menu */
 
 .menu ul{
@@ -175,3 +177,104 @@ body{
 .cart .remove{
     display: inline-block!important;
 }
+
+/* CSS for feedback */
+.feedback {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.feedback textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.feedback select,
+.feedback button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.feedback .reviews {
+    margin-top: 10px;
+}
+
+#userReview {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#rating {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#submitReview {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* modals */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgb(0, 0, 0);
+    background-color: rgba(122, 115, 115, 0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+}
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .delete {
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+  }
