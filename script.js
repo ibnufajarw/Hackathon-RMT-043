@@ -19,11 +19,13 @@ cardsBukuAnakAnak.innerHTML = cardsAnakAnak;
 function showBuku(i) {
 	return `<div class="item" data-key="1" onclick="showBookDetails('${i.judul}', '${i.penulis}', '${i.penerbit}', '${i.tahun}', '${i.bahasa}', '${i.gambar}', '${i.sinopsis}')">
 
+  return `<div class="item" data-key="${i.id}">
                 <div class="img">
-                    <img src="${i.gambar}" alt="gambar buku">
+                <img src="${i.gambar}" alt="gambar buku" onclick="showBookDetails('${i.judul}', '${i.penulis}', '${i.penerbit}', '${i.tahun}', '${i.bahasa}', '${i.gambar}', '${i.sinopsis}', '${i.stok}', '${i.harga}')">
                 </div>
                 <div class="content">
                     <div class="modal-title">${i.judul}</div>
+                    <div class="title" style="cursor:pointer">${i.judul}</div>
                     <div class="des">Penulis : ${i.penulis}</div>
                     <div class="des">Penerbit : ${i.penerbit}</div>
                     <div class="des">Tahun : ${i.tahun}</div>
@@ -70,6 +72,9 @@ function showBookDetails(judul, penulis, penerbit, tahun, bahasa, gambar, sinops
 
 // modal //
 
+let resetButton = document.getElementById('reset')
+let searchButton = document.querySelector(".searchButton");
+let inputClass = document.querySelector(".inputKeyword");
 
 function searchBooks() {
 	let keywordSearch = document
@@ -102,8 +107,7 @@ function searchBooks() {
 		}
 	}
 }
-let searchButton = document.querySelector(".searchButton");
-let inputClass = document.querySelector(".inputKeyword");
+
 searchButton.addEventListener("click", searchBooks);
 inputClass.addEventListener("keyup", function (btn) {
 	if (btn.keyCode === 13) {
@@ -144,7 +148,6 @@ document.querySelector("#submitReview").addEventListener("click", () => {
 		document.querySelector("#rating").value = "1";
 	}
 });
-
 displayReviews();
 
 //Progress Line 41 s.d 77
@@ -184,3 +187,41 @@ function Remove($key){
     })
 }
 //Progress Line 41 s.d 77
+
+(function reset() {
+  searchButton.addEventListener('click', function () {
+    resetButton.style.display = 'inline-block'
+  })
+  inputClass.addEventListener("keyup", function (btn) {
+    if (btn.keyCode === 13) {
+      resetButton.style.display = 'inline-block'
+    }
+  })
+  resetButton.addEventListener('click', function () {
+    window.location.href = 'index.html'
+  })
+})()
+
+
+//============================================== create akun khusus admin
+
+let users = []
+function tampilkanModal() {
+    document.getElementById("daftarModal").style.display = "block"
+    document.getElementById("daftarAkunButton").style.display = "none"
+}
+function simpanAkun() {
+    const username = document.getElementById("username").value
+    users.push({ username })
+    document.getElementById("daftarModal").style.display = "none"
+    document.getElementById("logoutButton").style.display = "block"
+    document.getElementById("userName").textContent = `Welcome, ${username}`
+    document.getElementById("userName").style.display = "block"
+}
+function logout() {
+    document.getElementById("userName").textContent = ""
+    document.getElementById("userName").style.display = "none"
+    document.getElementById("logoutButton").style.display = "none"
+    document.getElementById("daftarAkunButton").style.display = "block"
+    document.getElementById("daftarForm").reset()
+}

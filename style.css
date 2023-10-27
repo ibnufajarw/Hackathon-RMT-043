@@ -10,85 +10,87 @@ body{
     overflow: auto;
 }
 .container{
-    width:1300px;
-    border:1px solid var(--white);
-    max-width: 100%;
-    margin:50px auto 0;
+    width: 95%;
+    border: 3px solid var(--white);
+    max-width: auto;
+    margin: auto auto 0;
     display: grid;
-    grid-template-columns: 200px auto 300px;
-    padding:20px;
-    border-radius: 30px;
-    min-height: 80vh;
+    grid-template-columns: 12% auto 20%;
+    padding:10px;
+    border-radius: 20px;
+    min-height: 10px;
     overflow: auto;
 }
 .container .menu{
     background-color: var(--white);
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .container .cart{
     background-color: var(--white);
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .container .center{
     background-color: var(--light);
-    border-left: 1px solid var(--light);
-    border-right: 1px solid var(--light);
+    border-left: 10px solid var(--light);
+    border-right: 10px solid var(--light);
 }
 
 /* menu */
 
 .menu ul{
-    padding:20px 0 20px 20px;
+    padding: 20px 0 20px 20px;
     list-style: none;
     border-bottom: 1px solid var(--light);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 .menu ul li{
-    padding:10px 0;
+    padding: 10% 0;
 }
 .menu ul li i{
-    margin-right: 12px;
+    margin-right: 10px;
 }
 .menu ul li.active{
     color: var(--orange);
-    border-right: 2px solid var(--orange);
+    border-right: 10px solid var(--orange);
 }
 .menu ul li:hover{
     color: var(--orange);
-    border-right: 2px solid var(--orange);
+    border-right: 10px solid var(--orange);
 }
-
 .center .search{
     background-color: var(--white);
-    padding:20px;
-    height:40px;
+    padding: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: auto;
 }
 .center .search .form{
-    width:max-content;
-    border:1px solid var(--light);
-    border-radius: 20px;
-    padding-left:15px;
+    width: max-content;
+    border: 3px solid var(--light);
+    border-radius: 30px;
+    padding-left: 20px;
     color:var(--light);
 }
 .center .search .form input{
     border:none;
     padding:0 10px;
-    outline: none;
-    width:100px;
+    width: auto;
 }
 .center .search .form button{
-   border:none;
-   background-color: var(--orange);
-   color: var(--light);
-   padding:10px 20px;
-   border-radius: 20px;
+    border:none;
+    background-color: var(--orange);
+    color: var(--light);
+    padding:10px 20px;
+    border-radius: 20px;
 }
 
     /* end form */
 
 .center h2{
-    padding:20px;
+    padding:10px;
 }
 .center .list{
     padding:0 20px 20px;
@@ -100,28 +102,46 @@ body{
 .item{
     background-color: var(--white);
     display: grid;
-    grid-template-columns: 20% auto;
-    padding:10px;
+    grid-template-columns: 30% auto;
+    padding: 20px;
     column-gap: 20px;
     border-radius: 20px;
+    align-items: center;
 }
 .item .img img{
-    height:70px;
-}
-.item .img{
     background-color: var(--light);
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+.item .img:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+}
+.item .img{
+    background-color: var(--light);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
 }
 .item .content .title{
     font-weight: bold;
+    padding: 10px 10px;
+    max-width: auto;
+    border-radius: 20px;
+    word-wrap: break-word;
 }
 .item .content .des{
     font-size: small;
-    opacity: 0.7;
-    margin-top:5px;
+    opacity: 0.6;
+    margin-top: 4px;
 }
 .item .content .price{
     color:var(--orange);
@@ -135,9 +155,9 @@ body{
     border-radius: 10px;
     margin-right: 10px;
     padding:3px 5px;
-    border:1px solid var(--light);
+    border:3px solid var(--light);
     outline: none;
-     margin-top:5px;
+    margin-top:5px;
 }
 .item .content .add{
     margin-top:5px;
@@ -158,13 +178,13 @@ body{
 /* end center */
 .cart .item{
     transition: 0.5s;
-    border-bottom: 1px solid var(--light);
+    border-bottom: 3px solid var(--light);
 }
 .cart .name{
     padding:20px;
     height:40px;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: x-large;
     border-bottom:1px solid var(--light)
 }
 .danger{
@@ -176,56 +196,70 @@ body{
 }
 .cart .remove{
     display: inline-block!important;
+    box-shadow: 1px 1px 2px rgba(5, 3, 0, 0.55)
+    transition: box-shadow 0.5s;
+}
+.cart .remove:hover{
+    box-shadow: 1px 1px 8px rgba(5, 3, 0, 0.55)
 }
 
 /* CSS for feedback */
 .feedback {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
 .feedback textarea {
     width: 100%;
-    padding: 10px;
+    padding: auto;
     margin-bottom: 10px;
+    box-shadow: 1px 1px 2px rgba(5, 3, 0, 0.55)
+    transition: box-shadow 0.5s;
+}
+.feedback textarea:hover{
+    box-shadow: 1px 1px 8px rgba(5, 3, 0, 0.55)
 }
 
 .feedback select,
 .feedback button {
-    padding: 10px;
-    margin: 5px;
+    padding: auto;
+    margin: 20px;
 }
 
 .feedback .reviews {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #userReview {
     width: 100%;
-    height: 100px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    height: 100%;
+    margin: 30px -30px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
     padding: 10px;
 }
 
 #rating {
-    padding: 5px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
 }
 
 #submitReview {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffa500;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    margin: 10px 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 
@@ -285,3 +319,36 @@ body{
     color: #f1f1f1;
     cursor: pointer;
   }
+
+  .delete {
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+  }
+
+  .modaldaftar {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    /* CSS untuk mengatur tombol logout */
+    .logout-button {
+        display: none;
+    }
