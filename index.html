@@ -1,113 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Bookipedia</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" type="image/png" href="./assets/logo-png.png" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-		/>
-	</head>
-	<body>
-		<div class="container">
-			<div class="menu">
-				<div class="logo">
-					<img src="assets/logo-png.png" alt="logo" />
-				</div>
-				<ul>
-					<li class="active">
-						<i class="fa-solid fa-house-user fa-bounce"></i> Home
-					</li>
-					<li><i class="fa-solid fa-user fa-bounce"></i> User</li>
-				</ul>
-				<ul>
-					<li>
-						<i class="fa-brands fa-whatsapp fa-bounce"></i
-						><a style="text-decoration: none" href="https://www.whatsapp.com/">
-							Whatsapp</a
-						>
-					</li>
-					<li>
-						<i class="fa-solid fa-envelope fa-bounce"></i
-						><a style="text-decoration: none" href="https://www.gmail.com"
-							>Email</a
-						>
-					</li>
-					<li>
-						<i class="fa-brands fa-instagram fa-bounce"></i
-						><a style="text-decoration: none" href="https://www.Instagram.com"
-							>Instagram</a
-						>
-					</li>
-				</ul>
+
+<head>
+	<title>Bookipedia</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" type="image/png" href="./assets/logo-png.png" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="menu">
+			<div class="logo">
+				<img src="assets/logo-png.png" alt="logo" />
 			</div>
-			<div class="center">
-				<div class="search">
-					<div class="form">
-						<i class="fa-solid fa-magnifying-glass"></i>
-						<input class="inputKeyword" type="text" placeholder="Search..." />
-						<button class="searchButton">Search</button>
-						<button class="delete" id="reset" style="display: none">
-							Reset Pencarian
-						</button>
-					</div>
-				</div>
-				<div class="books">
-					<h2>Buku Kategori: Dewasa</h2>
-					<div class="list dataBukuDewasa" id="dataBukuDewasa"></div>
-					<h2>Buku Kategori: Anak-anak</h2>
-					<div class="list dataBukuAnakanak" id="dataBukuAnakanak"></div>
-				</div>
-				<div class="feedback">
-					<h3>Feedback</h3>
-					<textarea
-						id="userReview"
-						placeholder="Tulis ulasan Anda..."
-					></textarea>
-					<select id="rating">
-						<option value="1">1 Bintang</option>
-						<option value="2">2 Bintang</option>
-						<option value="3">3 Bintang</option>
-						<option value="4">4 Bintang</option>
-						<option value="5">5 Bintang</option>
-					</select>
-					<button id="submitReview">Send Feedback</button>
-				</div>
-				<div class="reviews"></div>
-			</div>
-			<div class="cart">
-				<div class="name">CART</div>
-				<div class="listCart"></div>
-			</div>
+			<ul>
+				<button id="daftarAkunButton" onclick="tampilkanModal()">Daftar Akun</button>
+				<button id="logoutButton" class="logout-button" onclick="logout()">Logout</button>
+				<h4 id="userName" class="logout-button"></h4>
+
+				<li class="active">
+					<i class="fa-solid fa-house-user fa-bounce"></i> Home
+				</li>
+				<li><i class="fa-solid fa-user fa-bounce"></i> User</li>
+			</ul>
+			<ul>
+				<li>
+					<i class="fa-brands fa-whatsapp fa-bounce"></i><a style="text-decoration: none"
+						href="https://www.whatsapp.com/">
+						Whatsapp</a>
+				</li>
+				<li>
+					<i class="fa-solid fa-envelope fa-bounce"></i><a style="text-decoration: none"
+						href="https://www.gmail.com">Email</a>
+				</li>
+				<li>
+					<i class="fa-brands fa-instagram fa-bounce"></i><a style="text-decoration: none"
+						href="https://www.Instagram.com">Instagram</a>
+				</li>
+			</ul>
 		</div>
-		<div id="myModal" class="modal">
-			<div class="modal-content" id="modalContent"></div>
+		<div class="center">
+			<div class="search">
+				<div class="form">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<input class="inputKeyword" type="text" placeholder="Search..." />
+					<button class="searchButton">Search</button>
+					<button class="delete" id="reset" style="display: none">
+						Reset Pencarian
+					</button>
+				</div>
+			</div>
+			<div class="books">
+				<h2>Buku Kategori: Dewasa</h2>
+				<div class="list dataBukuDewasa" id="dataBukuDewasa"></div>
+				<h2>Buku Kategori: Anak-anak</h2>
+				<div class="list dataBukuAnakanak" id="dataBukuAnakanak"></div>
+			</div>
+			<div class="feedback">
+				<h3>Feedback</h3>
+				<textarea id="userReview" placeholder="Tulis ulasan Anda..."></textarea>
+				<select id="rating">
+					<option value="1">1 Bintang</option>
+					<option value="2">2 Bintang</option>
+					<option value="3">3 Bintang</option>
+					<option value="4">4 Bintang</option>
+					<option value="5">5 Bintang</option>
+				</select>
+				<button id="submitReview">Send Feedback</button>
+			</div>
+			<div class="reviews"></div>
 		</div>
-		<script src="database.js"></script>
-		<script src="script.js"></script>
-        	<div id="daftarModal" class="modal">
-          	<div class="modal-content">
-			<h2>Daftar Akun  (khusus admin)</h2>
+		<div class="cart">
+			<div class="name">CART</div>
+			<div class="listCart"></div>
+		</div>
+	</div>
+	<div id="myModal" class="modal">
+		<div class="modal-content" id="modalContent"></div>
+	</div>
+	<script src="database.js"></script>
+	<script src="script.js"></script>
+	<div id="daftarModal" class="modal">
+		<div class="modal-content">
+			<h2>Daftar Akun (khusus admin)</h2>
 			<form id="daftarForm">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" required><br>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" required><br>
-                    <label for="kodepegawai">Kode Pegawai:</label>
-                    <input type="text" id="kodepegawai" required><br>
-                    <button type="button" onclick="simpanAkun()">Simpan</button>
-                </form>
-            </div>
-        </div>
+				<label for="username">Username:</label>
+				<input type="text" id="username" required><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" required><br>
+				<label for="kodepegawai">Kode Pegawai:</label>
+				<input type="text" id="kodepegawai" required><br>
+				<button type="button" onclick="simpanAkun()">Simpan</button>
+			</form>
+		</div>
+	</div>
 
-        <button id="ubahButton" style="display: none">Ubah Data Buku</button>
-    </div>
+	<button id="ubahButton" style="display: none">Ubah Data Buku</button>
+	</div>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content" id="modalContent"></div>
-    </div>
-    <script src="database.js"></script>
-    <script src="script.js"></script>
+	<div id="myModal" class="modal">
+		<div class="modal-content" id="modalContent"></div>
+	</div>
+	<script src="database.js"></script>
+	<script src="script.js"></script>
 </body>
+
 </html>
